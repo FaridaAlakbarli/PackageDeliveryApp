@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="521facfc-bc44-45b7-b644-ddccdc69876a" name="Changes" comment="Create truck class">
-      <change afterPath="$PROJECT_DIR$/DistanceTable.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HashTable.py" afterDir="false" />
+    <list default="true" id="521facfc-bc44-45b7-b644-ddccdc69876a" name="Changes" comment="Modify Package class&#10;Create Package HashTable and DistanceTable">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Package.py" beforeDir="false" afterPath="$PROJECT_DIR$/Package.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Truck.py" beforeDir="false" afterPath="$PROJECT_DIR$/Truck.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -28,38 +26,38 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "FaridaAlakbarli"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;FaridaAlakbarli&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/FaridaAlakbarli/PackageDeliveryApp.git",
-    "accountId": "d1f6019a-b4d4-4368-80bd-28aac7ddac6d"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/FaridaAlakbarli/PackageDeliveryApp.git&quot;,
+    &quot;accountId&quot;: &quot;d1f6019a-b4d4-4368-80bd-28aac7ddac6d&quot;
   }
-}]]></component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 3
-}]]></component>
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 3
+}</component>
   <component name="ProjectId" id="39BwUHKy9oLOmEhGN69AeMUWZ5o" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "Python.Distance.executor": "Run",
-    "Python.DistanceTable.executor": "Run",
-    "Python.Package.executor": "Run",
-    "Python.main.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "working"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;Python.Distance.executor&quot;: &quot;Run&quot;,
+    &quot;Python.DistanceTable.executor&quot;: &quot;Run&quot;,
+    &quot;Python.Package.executor&quot;: &quot;Run&quot;,
+    &quot;Python.main.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;working&quot;
   }
-}]]></component>
+}</component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -91,12 +89,21 @@
       <option name="project" value="LOCAL" />
       <updated>1770331102558</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Modify Package class&#10;Create Package HashTable and DistanceTable">
+      <option name="closed" value="true" />
+      <created>1771304515321</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1771304515321</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Create package class" />
     <MESSAGE value="Create truck class" />
-    <option name="LAST_COMMIT_MESSAGE" value="Create truck class" />
+    <MESSAGE value="Modify Package class&#10;Create Package HashTable and DistanceTable" />
+    <option name="LAST_COMMIT_MESSAGE" value="Modify Package class&#10;Create Package HashTable and DistanceTable" />
   </component>
 </project>
