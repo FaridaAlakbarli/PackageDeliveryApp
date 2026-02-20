@@ -8,14 +8,14 @@ class Truck:
         self.truck_id = truck_id
         self.departure_time = departure_time
         self.packages = []
-        self.current_location = "Hub"
+        self.current_location = "HUB"
         self.mileage = 0.0
         self.current_time = departure_time
 
 
-    def load_packages(self, package_id):
-        if self.packages < 16:
-            self.packages.append(package_id)
+    def load_packages(self, package_id_list):
+        if len(package_id_list) < 16:
+            self.packages=package_id_list
         else:
             print("Truck is full")
 
@@ -35,7 +35,7 @@ class Truck:
 
 
     def return_to_hub(self, distance):
-        self.travel_to("Hub", distance)
+        self.travel_to("HUB", distance)
 
 
     def __str__(self):

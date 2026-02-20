@@ -2,7 +2,7 @@ import csv
 
 class DistanceTable:
     def __init__(self, filename):
-        self.addresses = []
+        self.addresses = ['HUB']
         self.distances = []
         self.load_csv(filename)
 
@@ -12,7 +12,8 @@ class DistanceTable:
 
             for row_index, row in enumerate(reader):
                 if row_index == 0:
-                    self.addresses = row[2:]
+                    for address in row[3:]:
+                        self.addresses.append(address.split('\n')[-1].strip())
                 else:
                     self.distances.append(row[2:])
 
