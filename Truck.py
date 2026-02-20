@@ -13,11 +13,11 @@ class Truck:
         self.current_time = departure_time
 
 
-    def load_packages(self, package_id_list):
-        if len(package_id_list) < 16:
-            self.packages=package_id_list
-        else:
-            print("Truck is full")
+    def load_packages(self, package_id_list, hashtable):
+        self.packages=package_id_list
+        for package_id in package_id_list:
+            hashtable.update_departure_time(package_id, self.departure_time)
+
 
 
     def travel_to(self, address, distance):

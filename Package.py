@@ -8,6 +8,7 @@ class Package:
         self.weight = weight
         self.status = status
         self.delivery_time=None
+        self.departure_time=None
 
     def __str__(self):
         return (f"ID: {self.id}, Address: {self.address}, City: {self.city},"

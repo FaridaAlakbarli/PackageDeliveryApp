@@ -34,6 +34,10 @@ class HashTable:
 
         return None
 
+    def update_departure_time(self, package_id, departure_time):
+        package = self.lookup(package_id)
+        package.status = "en route"
+        package.departure_time = departure_time
 
     def update_status(self, package_id, status, delivery_time):
         package = self.lookup(package_id)
