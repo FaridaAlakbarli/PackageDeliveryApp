@@ -10,11 +10,11 @@ import csv
 import deliver_truck
 if __name__ == '__main__':
     #store distance data from csv file
-    distance_table = DistanceTable.DistanceTable('/Users/faridaalakbarli/Downloads/Distance_Table.csv')
+    distance_table = DistanceTable.DistanceTable('Distance_Table.csv')
 
     #create package instances and insert them into hashtable
     hashtable = HashTable.HashTable()
-    with open('/Users/faridaalakbarli/Downloads/PackageFile.csv', encoding='utf-8-sig') as csvfile:
+    with open('PackageFile.csv', encoding='utf-8-sig') as csvfile:
         reader = csv.reader(csvfile)
         for row in reader:
             package = Package.Package(int(row[0]), row[1], row[2], row[4],
