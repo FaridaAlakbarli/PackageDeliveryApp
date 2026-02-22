@@ -1,4 +1,5 @@
-import datetime
+#Student ID: 012234998 Student Name: Farida Alakbarli
+
 
 import DistanceTable
 import Truck
@@ -8,11 +9,10 @@ from datetime import *
 import csv
 import deliver_truck
 if __name__ == '__main__':
+    #store distance data from csv file
     distance_table = DistanceTable.DistanceTable('/Users/faridaalakbarli/Downloads/Distance_Table.csv')
-    '''print(distance_table.get_distance(
-        "1060 Dalton Ave S",
-        "1330 2100 S"))'''
 
+    #create package instances and insert them into hashtable
     hashtable = HashTable.HashTable()
     with open('/Users/faridaalakbarli/Downloads/PackageFile.csv', encoding='utf-8-sig') as csvfile:
         reader = csv.reader(csvfile)
@@ -21,16 +21,17 @@ if __name__ == '__main__':
                                       row[5], row[6], "at hub")
             hashtable.insert(package)
 
-    print(hashtable.lookup(1))
-
+    #create truck instances and load them with packages
     truck1 = Truck.Truck(truck_id=1, departure_time=datetime.combine(date.today(), time(8, 0)))
     truck1.load_packages([15, 16, 13, 14, 1, 20, 29, 30, 31, 34, 37, 40], hashtable)
     truck2 = Truck.Truck(truck_id=2, departure_time=datetime.combine(date.today(),time(9, 5)))
     truck2.load_packages([6, 25, 2, 3, 10, 18, 21, 26, 27, 28, 32, 33, 36, 38], hashtable)
 
+    #deliver packages
     deliver_truck.deliver_truck(truck1, hashtable, distance_table)
     deliver_truck.deliver_truck(truck2, hashtable, distance_table)
 
+    #modify packages 9 before loading
     package9 = hashtable.lookup(9)
     package9.address = '410 S State St'
     package9.zipcode = '84111'
@@ -41,7 +42,7 @@ if __name__ == '__main__':
 
     deliver_truck.deliver_truck(truck3, hashtable, distance_table)
 
-
+    #user interface
     print('WGUPS Delivery System')
     while True:
         print("\nMenu:")
@@ -57,7 +58,7 @@ if __name__ == '__main__':
             user_time = datetime.strptime(input_time, "%I:%M %p")
             new_user_time = user_time.combine(date.today(), time(user_time.hour, user_time.minute))
 
-
+            #compare user time to delivery and/or departure time of the package
             for bucket in hashtable.table:
                 for package in bucket:
 
@@ -70,10 +71,6 @@ if __name__ == '__main__':
                     else:
                         print(f"Delivered at {package.delivery_time.time()}")
 
-            for package_id in truck1.packages:
-                package = hashtable.lookup(package_id)
-                print(package.id, package.status)
-
 
         elif choice == "2":
             user_package_id = int(input("Enter package ID to see delivery status: "))
@@ -85,7 +82,4 @@ if __name__ == '__main__':
         else:
             print("Invalid option")
 
-    print(truck1.current_time)
-    print(truck2.current_time)
-    print(truck3.departure_time)
-    print(hashtable.lookup(9).departure_time)
+

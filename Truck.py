@@ -12,14 +12,14 @@ class Truck:
         self.mileage = 0.0
         self.current_time = departure_time
 
-
+    #create method to load packages that modifies package departure time
     def load_packages(self, package_id_list, hashtable):
         self.packages=package_id_list
         for package_id in package_id_list:
             hashtable.update_departure_time(package_id, self.departure_time)
 
 
-
+    #create method to update mileage, location and time of the truck
     def travel_to(self, address, distance):
         self.mileage += distance
         travel_seconds = (distance / 18) * 3600
@@ -27,12 +27,12 @@ class Truck:
         self.current_location = address
 
 
+    #create method to deliver packages and change their status
     def deliver_package(self, package_id, hashtable):
-        hashtable.update_status(package_id, "Delivered",
+        hashtable.update_status(package_id, "delivered",
                                 self.current_time)
 
         self.packages.remove(package_id)
-
 
     def return_to_hub(self, distance):
         self.travel_to("HUB", distance)
